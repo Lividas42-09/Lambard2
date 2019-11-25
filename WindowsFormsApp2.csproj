@@ -65,6 +65,35 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="LambardDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LambardDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tablica Kategorii tovarov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablica Kategorii tovarov.Designer.cs">
+      <DependentUpon>Tablica Kategorii tovarov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tablica Sdacha v lambard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablica Sdacha v lambard.Designer.cs">
+      <DependentUpon>Tablica Sdacha v lambard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tablica_Cena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablica_Cena.Designer.cs">
+      <DependentUpon>Tablica_Cena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tablica_Klienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tablica_Klienti.Designer.cs">
+      <DependentUpon>Tablica_Klienti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Задание 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +147,18 @@
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tablica Kategorii tovarov.resx">
+      <DependentUpon>Tablica Kategorii tovarov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablica Sdacha v lambard.resx">
+      <DependentUpon>Tablica Sdacha v lambard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablica_Cena.resx">
+      <DependentUpon>Tablica_Cena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tablica_Klienti.resx">
+      <DependentUpon>Tablica_Klienti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Задание 1.resx">
       <DependentUpon>Задание 1.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +190,17 @@
     <EmbeddedResource Include="Задание 5.resx">
       <DependentUpon>Задание 5.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LambardDataSet.xsc">
+      <DependentUpon>LambardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LambardDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LambardDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LambardDataSet.xss">
+      <DependentUpon>LambardDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

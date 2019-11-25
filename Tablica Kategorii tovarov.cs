@@ -11,9 +11,9 @@ using static WindowsFormsApp2.Class1;
 
 namespace WindowsFormsApp2
 {
-    public partial class Form9 : Form
+    public partial class Tablica_Kategorii_tovarov : Form
     {
-        public Form9()
+        public Tablica_Kategorii_tovarov()
         {
             InitializeComponent();
         }
@@ -29,32 +29,17 @@ namespace WindowsFormsApp2
             dataGridView1.Rows.Clear();
             foreach (var l in list)
             {
-                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3], l[4], l[5], l[6], l[7]);
+                dataGridView1.Rows.Add(l[0], l[1], l[2], l[3]);
             }
             dataGridView1.Refresh();
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Tablica_Kategorii_tovarov_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form9_Load(object sender, EventArgs e)
-        {
-            dataGridView1.Columns.Add("ID_tovara", "ID_tovara");
             dataGridView1.Columns.Add("ID_kategorii", "ID_kategorii");
-            dataGridView1.Columns.Add("Nazvanie", "Nazvanie");
-            dataGridView1.Columns.Add("Opisanie", "Opisanie");
-            dataGridView1.Columns.Add("Srok_eksplotacii", "Srok_eksplotacii");
-            dataGridView1.Columns.Add("Sostoianie_prodaji", "Sostoianie_prodaji");
-            dataGridView1.Columns.Add("Kachestvo_tovara", "Kachestvo_tovara");
-            dataGridView1.Columns.Add("Srok_otkladivania_tovara_v_nedelah", "Srok_otkladivania_tovara_v_nedelah");
+            dataGridView1.Columns.Add("Nevikuplenie_veshi", "Nevikuplenie_veshi");
+            dataGridView1.Columns.Add("Nasvanie", "Nasvanie");
+            dataGridView1.Columns.Add("Priminenie", "Priminenie");
         }
 
         private void button2_Click(object sender, EventArgs e)

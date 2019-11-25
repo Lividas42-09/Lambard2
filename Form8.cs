@@ -64,5 +64,18 @@ namespace WindowsFormsApp2
             sistema.ShowDialog();
             this.Close();
         }
+
+        private void Form8_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Задание_1 sistema = new Задание_1();
+            sistema.ShowDialog();
+            this.Close();
+        }
     }
 }

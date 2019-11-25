@@ -21,5 +21,13 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form8 sistema = new Form8();
+            sistema.ShowDialog();
+            this.Close();
+        }
     }
 }
