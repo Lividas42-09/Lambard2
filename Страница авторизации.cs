@@ -55,7 +55,7 @@ namespace WindowsFormsApp2
             }
             if (DBConnectionService.SetSqlConnection(GetDBConnectionString(datasource, database, username, userpass)))
             {
-                MessageBox.Show("Выполнено!", "Соединение подключено", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Выполнен!", "Соединение подключено", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 Form7 sistema = new Form7();
                 sistema.ShowDialog();
