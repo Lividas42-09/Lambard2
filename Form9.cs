@@ -64,5 +64,40 @@ namespace WindowsFormsApp2
             sistema.ShowDialog();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID_tovara = null;
+            string ID_kategorii = null;
+            string Nazvanie = null;
+            string Opisanie = null;
+            string Srok_eksplotacii = null;
+            string Sostoianie_prodaji = null;
+            string Kachestvo_tovara = null;
+            string Srok_otkladivania_tovara_v_nedelah = null;
+            try
+            {
+                ID_tovara = ID_tovar.Text;
+                ID_kategorii = ID_kategori.Text;
+                Nazvanie = Nazvani.Text;
+                Opisanie = Opisani.Text;
+                Srok_eksplotacii = Srok_eksplotaci.Text;
+                Sostoianie_prodaji = Sostoianie_prodaj.Text;
+                Kachestvo_tovara = Kachestvo_tovar.Text;
+                Srok_otkladivania_tovara_v_nedelah = Srok_otkladivania_tovara_v_nedela.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "INSERT INTO Tovar(ID_tovara,ID_kategorii,Nazvanie,Opisanie,Srok_eksplotacii,Sostoianie_prodaji,Kachestvo_tovara,Srok_otkladivania_tovara_v_nedelah) " +
+                "values(" + $"'{ID_tovara}','{ID_kategorii}','{Nazvanie}','{Opisanie}','{Srok_eksplotacii}','{Sostoianie_prodaji}','{Kachestvo_tovara}','{Srok_otkladivania_tovara_v_nedelah}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

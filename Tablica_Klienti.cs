@@ -20,7 +20,7 @@ namespace WindowsFormsApp2
 
         private void Tablica_Klienti_Load(object sender, EventArgs e)
         {
-
+             
             dataGridView1.Columns.Add("ID_klienta", "ID_klienta");
             dataGridView1.Columns.Add("Familia", "Familia");
             dataGridView1.Columns.Add("Imia", "Imia");
@@ -54,6 +54,47 @@ namespace WindowsFormsApp2
             Form7 sistema = new Form7();
             sistema.ShowDialog();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID_klienta = null;
+            string Familia = null;
+            string Imia = null;
+            string Otchestvo = null;
+            string Nomer_pasporta = null;
+            string Ceria_pasporta = null;
+            string Data_sdachi = null;
+            string Data_vidachi_pasporta = null;
+            try
+            {
+                ID_klienta = ID_klient.Text;
+                Familia = Famili.Text;
+                Imia = Imi.Text;
+                Otchestvo = Otchestv.Text;
+                Nomer_pasporta = Nomer_pasport.Text;
+                Ceria_pasporta = Ceria_pasport.Text;
+                Data_sdachi = Data_sdach.Text;
+                Data_vidachi_pasporta = Data_vidachi_pasport.Text;
+                
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "INSERT INTO Klienti(ID_klienta,Familia,Imia,Otchestvo,Nomer_pasporta,Ceria_pasporta,Data_sdachi,Data_vidachi_pasporta) " +
+                "values(" + $"'{ID_klienta}','{Familia}','{Imia}','{Otchestvo}','{Nomer_pasporta}','{Ceria_pasporta}','{Data_sdachi}','{Data_vidachi_pasporta}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

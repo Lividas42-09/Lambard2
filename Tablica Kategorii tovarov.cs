@@ -20,10 +20,10 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "select * from Tovar";
+            string query = "select * from Kategorii_tovarov";
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
-                query += "where Tovar= '" + textBox1.Text + "'";
+                query += "where Kategorii_tovarov= '" + textBox1.Text + "'";
             }
             var list = DBConnectionService.SendQueryToSqlServer(query);
             dataGridView1.Rows.Clear();
@@ -48,6 +48,38 @@ namespace WindowsFormsApp2
             Form7 sistema = new Form7();
             sistema.ShowDialog();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID_kategorii = null;
+            string Nevikuplenie_veshi = null;
+            string Nasvanie = null;
+            string Priminenie = null;
+            try
+            {
+                ID_kategorii = ID.Text;
+                Nevikuplenie_veshi = Nevikuplenie_vesh.Text;
+                Nasvanie = Nazvanie.Text;
+                Priminenie = Primineni.Text;
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "INSERT INTO Kategorii_tovarov(ID_kategorii,Nevikuplenie_veshi,Nasvanie,Priminenie) " +
+                "values(" + $"'{ID_kategorii}','{Nevikuplenie_veshi}','{Nasvanie}','{Priminenie}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if(result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

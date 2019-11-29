@@ -56,5 +56,56 @@ namespace WindowsFormsApp2
             sistema.ShowDialog();
             this.Close();
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID = null;
+            string ID_klienta = null;
+            string ID_tovara = null;
+            string Pribil = null;
+            string Opisanye_tovara = null;
+            string Data_sdachi = null;
+            string Data_prodaji = null;
+            string Data_vozvrata = null;
+            string Data_nevozvrata = null;
+            string Summa = null;
+            string Komissionnie = null;
+            try
+            {
+                ID = ID1.Text;
+                ID_klienta = ID_klient.Text;
+                ID_tovara = ID_tovar.Text;
+                Pribil = Pribil1.Text;
+                Opisanye_tovara = Opisanye_tovar.Text;
+                Data_sdachi = Data_sdach.Text;
+                Data_prodaji = Data_prodaj.Text;
+                Data_vozvrata = Data_vozvrat.Text;
+                Data_nevozvrata = Data_nevozvrat.Text;
+                Summa = Summ.Text;
+                Komissionnie = Komissionni.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "INSERT INTO Sdacha_v_lambard(ID,ID_klienta,ID_tovara,Pribil,Opisanye_tovara,Data_sdachi,Data_prodaji,Data_vozvrata,Data_nevozvrata,Summa,Komissionnie) " +
+                "values(" + $"'{ID}','{ID_klienta}','{ID_tovara}','{Pribil}','{Opisanye_tovara}','{Data_sdachi}','{Data_prodaji}','{Data_vozvrata}','{Data_nevozvrata}','{Summa}','{Komissionnie}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

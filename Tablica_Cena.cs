@@ -51,5 +51,41 @@ namespace WindowsFormsApp2
             sistema.ShowDialog();
             this.Close();
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string ID_ceni = null;
+            string ID_tovara = null;
+            string Izmenenie_ceni = null;
+            string Skidka = null;
+            string Summa_dla_vikupa_veshei = null;
+            string Data_izmenenie_ceni = null;
+            try
+            {
+                ID_ceni = ID_cen.Text;
+                ID_tovara = ID_tovar.Text;
+                Izmenenie_ceni = Izmenenie_cen.Text;
+                Skidka = Skidk.Text;
+                Summa_dla_vikupa_veshei = Summa_dla_vikupa_veshe.Text;
+                Data_izmenenie_ceni = Data_izmenenie_cen.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string query = "INSERT INTO Cena(ID_ceni,ID_tovara,Izmenenie_ceni,Skidka,Summa_dla_vikupa_veshei,Data_izmenenie_ceni) " +
+                "values(" + $"'{ID_ceni}','{ID_tovara}','{Izmenenie_ceni}','{Skidka}','{Summa_dla_vikupa_veshei}','{Data_izmenenie_ceni}'" + ")";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

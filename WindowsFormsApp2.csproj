@@ -256,5 +256,17 @@
   <ItemGroup>
     <None Include="Resources\57994cd5bb15dcfa44f7657fc90d8473.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39097-anime-teatralnye_dekoracii-priroda-dnevnoe_vremya-spokojnyj-x750.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\147200395612713356.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wp4712630.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

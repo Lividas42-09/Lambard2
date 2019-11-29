@@ -83,9 +83,29 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _147200395612713356 {
+            get {
+                object obj = ResourceManager.GetObject("147200395612713356", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1512073346_5895dcd67f5d715a0966a5fa {
             get {
                 object obj = ResourceManager.GetObject("1512073346_5895dcd67f5d715a0966a5fa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _39097_anime_teatralnye_dekoracii_priroda_dnevnoe_vremya_spokojnyj_x750 {
+            get {
+                object obj = ResourceManager.GetObject("39097-anime-teatralnye_dekoracii-priroda-dnevnoe_vremya-spokojnyj-x750", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +153,16 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images__1_ {
+            get {
+                object obj = ResourceManager.GetObject("images (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lucky_star_earth_anime_izumi_pics_690615 {
             get {
                 object obj = ResourceManager.GetObject("lucky-star-earth-anime-izumi-pics-690615", resourceCulture);
@@ -146,6 +176,16 @@ namespace WindowsFormsApp2.Properties {
         internal static System.Drawing.Bitmap thumb_1920_893577 {
             get {
                 object obj = ResourceManager.GetObject("thumb-1920-893577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wp4712630 {
+            get {
+                object obj = ResourceManager.GetObject("wp4712630", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

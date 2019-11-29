@@ -121,8 +121,14 @@
   <data name="1512073346_5895dcd67f5d715a0966a5fa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1512073346_5895dcd67f5d715a0966a5fa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="57994cd5bb15dcfa44f7657fc90d8473" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\57994cd5bb15dcfa44f7657fc90d8473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Без названия (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Без названия (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="39097-anime-teatralnye_dekoracii-priroda-dnevnoe_vremya-spokojnyj-x750" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\39097-anime-teatralnye_dekoracii-priroda-dnevnoe_vremya-spokojnyj-x750.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="a2e53fb0507027f5894d1f9004c8ecbb2c887847r1-1500-844v2_hq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a2e53fb0507027f5894d1f9004c8ecbb2c887847r1-1500-844v2_hq.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +151,9 @@
   <data name="Без названия2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Без названия2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="147200395612713356" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\147200395612713356.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="142799" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\142799.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,10 +163,13 @@
   <data name="thumb-1920-893577" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thumb-1920-893577.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bliss-lucky-star-windows-xp-anime-izumi-konata-1600x1200-wallpaper-589249" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bliss-lucky-star-windows-xp-anime-izumi-konata-1600x1200-wallpaper-589249.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="57994cd5bb15dcfa44f7657fc90d8473" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\57994cd5bb15dcfa44f7657fc90d8473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wp4712630" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp4712630.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
