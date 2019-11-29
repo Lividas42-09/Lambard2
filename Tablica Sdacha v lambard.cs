@@ -107,5 +107,47 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string ID = null;
+            string ID_klienta = null;
+            string ID_tovara = null;
+            string Pribil = null;
+            string Opisanye_tovara = null;
+            string Data_sdachi = null;
+            string Data_prodaji = null;
+            string Data_vozvrata = null;
+            string Data_nevozvrata = null;
+            string Summa = null;
+            string Komissionnie = null;
+            try
+            {
+                ID = ID1.Text;
+                ID_klienta = ID_klient.Text;
+                ID_tovara = ID_tovar.Text;
+                Pribil = Pribil1.Text;
+                Opisanye_tovara = Opisanye_tovar.Text;
+                Data_sdachi = Data_sdach.Text;
+                Data_prodaji = Data_prodaj.Text;
+                Data_vozvrata = Data_vozvrat.Text;
+                Data_nevozvrata = Data_nevozvrat.Text;
+                Summa = Summ.Text;
+                Komissionnie = Komissionni.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int n =
+                int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = "update dbo.Sdacha_v_lambard Pribil = '" + Pribil + "', Opisanye_tovara = '" + Opisanye_tovara + "', Data_sdachi = '" + Data_sdachi + "', Data_prodaji = '" + Data_prodaji + "', Data_vozvrata = '" + Data_vozvrata + "', Data_nevozvrata = '" + Data_nevozvrata + "', Summa = '" + Summa + "', Komissionnie = '" + Komissionnie + "', where ID = '"+ ID +"'";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Object is updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

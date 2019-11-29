@@ -99,5 +99,67 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Done", "Saving object", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string ID_tovara = null;
+            string ID_kategorii = null;
+            string Nazvanie = null;
+            string Opisanie = null;
+            string Srok_eksplotacii = null;
+            string Sostoianie_prodaji = null;
+            string Kachestvo_tovara = null;
+            string Srok_otkladivania_tovara_v_nedelah = null;
+            try
+            {
+                ID_tovara = ID_tovar.Text;
+                ID_kategorii = ID_kategori.Text;
+                Nazvanie = Nazvani.Text;
+                Opisanie = Opisani.Text;
+                Srok_eksplotacii = Srok_eksplotaci.Text;
+                Sostoianie_prodaji = Sostoianie_prodaj.Text;
+                Kachestvo_tovara = Kachestvo_tovar.Text;
+                Srok_otkladivania_tovara_v_nedelah = Srok_otkladivania_tovara_v_nedela.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int n =
+                int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = "Update dbo.Tovar set Nazvanie = '"+ Nazvanie + "',Srok_otkladivania_tovara_v_nedelah ='"+ Srok_otkladivania_tovara_v_nedelah + "', Srok_eksplotacii = '" + Srok_eksplotacii + "', Kachestvo_tovara = '"+ Kachestvo_tovara + "', Opisanie = '" + Opisanie +"', Sostoianie_prodaji = '"+ Sostoianie_prodaji +"' where ID_tovara = '"+ ID_tovara +"'";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Object is Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "select ID_tovara,ID_kategorii,Nazvanie,Opisanie,Srok_eksplotacii,Sostoianie_prodaji,Kachestvo_tovara,Srok_otkladivania_tovara_v_nedelah from dbo.Tovar";
+            var list =
+                DBConnectionService.SendQueryToSqlServer(query)?.Select(row => new IdentityItem(row[0], row[1])).ToArray();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(list);
+        }
+
+        private class IdentityItem
+        {
+            private string v1;
+            private string v2;
+
+            public IdentityItem(string v1, string v2)
+            {
+                this.v1 = v1;
+                this.v2 = v2;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

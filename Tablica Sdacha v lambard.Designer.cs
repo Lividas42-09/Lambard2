@@ -55,6 +55,7 @@
             this.Summ = new System.Windows.Forms.TextBox();
             this.Komissionni = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,13 +276,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1069, 32);
+            this.button3.Location = new System.Drawing.Point(884, 33);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 44);
             this.button3.TabIndex = 26;
-            this.button3.Text = "Изменение данных";
+            this.button3.Text = "Добавление данных";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1113, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(144, 44);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Изменение данных";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Tablica_Sdacha_v_lambard
             // 
@@ -289,6 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources._147200395612713356;
             this.ClientSize = new System.Drawing.Size(1352, 517);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Komissionni);
             this.Controls.Add(this.Summ);
@@ -354,5 +366,6 @@
         private System.Windows.Forms.TextBox Komissionni;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Opisanye_tovar;
+        private System.Windows.Forms.Button button4;
     }
 }

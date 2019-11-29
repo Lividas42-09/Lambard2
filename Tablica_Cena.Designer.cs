@@ -45,6 +45,7 @@
             this.Skidk = new System.Windows.Forms.TextBox();
             this.Summa_dla_vikupa_veshe = new System.Windows.Forms.TextBox();
             this.Data_izmenenie_cen = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +88,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(999, 12);
+            this.button3.Location = new System.Drawing.Point(870, 18);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 46);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Изменение данных";
+            this.button3.Text = "Добавление данных";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -192,12 +193,23 @@
             this.Data_izmenenie_cen.Size = new System.Drawing.Size(254, 22);
             this.Data_izmenenie_cen.TabIndex = 16;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1109, 18);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(139, 46);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Изменение данных";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Tablica_Cena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.images__1_;
             this.ClientSize = new System.Drawing.Size(1315, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.Data_izmenenie_cen);
             this.Controls.Add(this.Summa_dla_vikupa_veshe);
             this.Controls.Add(this.Skidk);
@@ -243,5 +255,6 @@
         private System.Windows.Forms.TextBox Skidk;
         private System.Windows.Forms.TextBox Summa_dla_vikupa_veshe;
         private System.Windows.Forms.TextBox Data_izmenenie_cen;
+        private System.Windows.Forms.Button button4;
     }
 }

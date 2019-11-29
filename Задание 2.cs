@@ -37,14 +37,14 @@ namespace WindowsFormsApp2
               from dbo.Klienti, dbo.Sdacha_v_Lambard, dbo.Tovar
               where Tovar.Srok_otkladivania_tovara_v_nedelah = '1'and Tovar.Sostoianie_prodaji != 'Распродан'";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            Form2.ClearAndAddColumnsDataGridView(dataGridView1, "Familia","Imia","Otchestvo");
+            Form2.ClearAndAddColumnsDataGridView(dataGridView1, "Familia","Imia","Otchestvo", "Srok_otkladivania_tovara_v_nedelah", "Data_prodaji", "Sostoianie_prodaji");
             foreach (var row in list)
             {
                 dataGridView1.Rows.Add(row[0],row[1],row[2],row[3],row[4],row[5]);
             }
         }
 
-        private static void ClearAndAddColumnsDataGridView(DataGridView dataGridView1, string v1, string v2, string v3)
+        private static void ClearAndAddColumnsDataGridView(DataGridView dataGridView1, string v1, string v2, string v3, string v4, string v5, string v6)
         {
             
         }

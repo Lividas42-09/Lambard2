@@ -96,5 +96,43 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string ID_klienta = null;
+            string Familia = null;
+            string Imia = null;
+            string Otchestvo = null;
+            string Nomer_pasporta = null;
+            string Ceria_pasporta = null;
+            string Data_sdachi = null;
+            string Data_vidachi_pasporta = null;
+            try
+            {
+                ID_klienta = ID_klient.Text;
+                Familia = Famili.Text;
+                Imia = Imi.Text;
+                Otchestvo = Otchestv.Text;
+                Nomer_pasporta = Nomer_pasport.Text;
+                Ceria_pasporta = Ceria_pasport.Text;
+                Data_sdachi = Data_sdach.Text;
+                Data_vidachi_pasporta = Data_vidachi_pasport.Text;
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int n =
+                int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                Data_vidachi_pasporta = Data_vidachi_pasport.Text;
+            string query = "update dbo.Klienti set Familia = '"+ Familia + "', Imia = '"+ Imia + "', Otchestvo = '"+ Otchestvo + "', Nomer_pasporta = '"+ Nomer_pasporta + "', Ceria_pasporta = '"+ Ceria_pasporta + "', Data_sdachi = '"+ Data_sdachi + "', Data_vidachi_pasporta = '"+ Data_vidachi_pasporta + "' where ID_klienta = '"+ ID_klienta + "'"; 
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Object is updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

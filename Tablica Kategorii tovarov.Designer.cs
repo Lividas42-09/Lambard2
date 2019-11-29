@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(983, 307);
+            this.button3.Location = new System.Drawing.Point(856, 308);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 53);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Изменение данных";
+            this.button3.Text = "Добавление данных";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -165,12 +166,23 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Nevikuplenie_veshi";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1086, 308);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(167, 53);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Изменение данных";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Tablica_Kategorii_tovarov
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.wp4712630;
             this.ClientSize = new System.Drawing.Size(1313, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -53,6 +53,7 @@
             this.Ceria_pasport = new System.Windows.Forms.TextBox();
             this.Data_sdach = new System.Windows.Forms.TextBox();
             this.Data_vidachi_pasport = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lambardDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,11 +121,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1049, 12);
+            this.button3.Location = new System.Drawing.Point(891, 20);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 53);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Изменение данных";
+            this.button3.Text = "Добавление данных";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -248,12 +249,23 @@
             this.Data_vidachi_pasport.Size = new System.Drawing.Size(265, 22);
             this.Data_vidachi_pasport.TabIndex = 21;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1102, 20);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(143, 53);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Изменение данных";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Tablica_Klienti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources._39097_anime_teatralnye_dekoracii_priroda_dnevnoe_vremya_spokojnyj_x750;
             this.ClientSize = new System.Drawing.Size(1326, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.Data_vidachi_pasport);
             this.Controls.Add(this.Data_sdach);
             this.Controls.Add(this.Ceria_pasport);
@@ -312,5 +324,6 @@
         private System.Windows.Forms.TextBox Ceria_pasport;
         private System.Windows.Forms.TextBox Data_sdach;
         private System.Windows.Forms.TextBox Data_vidachi_pasport;
+        private System.Windows.Forms.Button button4;
     }
 }

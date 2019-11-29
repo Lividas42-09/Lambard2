@@ -81,5 +81,33 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string ID_kategorii = null;
+            string Nevikuplenie_veshi = null;
+            string Nasvanie = null;
+            string Priminenie = null;
+            try
+            {
+                ID_kategorii = ID.Text;
+                Nevikuplenie_veshi = Nevikuplenie_vesh.Text;
+                Nasvanie = Nazvanie.Text;
+                Priminenie = Primineni.Text;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int n =
+                int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = " update dbo.Kategorii_tovarov set Nasvanie = '"+ Nasvanie +"',Nevikuplenie_veshi = '"+ Nevikuplenie_veshi +"', Priminenie = '"+ Priminenie +"' where ID_kategorii = '"+ ID_kategorii +"'";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Done", "Object is updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
+        }
     }
 }
